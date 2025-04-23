@@ -1,13 +1,14 @@
 package com.remedios.controllers;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping("/hello")
 public class HelloWorld {
     
-    @RequestMapping("/hello")
+    @GetMapping
     public String hello() {
         return "Hello World!";
     }
