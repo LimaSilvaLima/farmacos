@@ -1,5 +1,7 @@
 package com.remedios.remedio;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -7,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -38,8 +41,15 @@ public class Remedio {
     @Enumerated(EnumType.STRING)
     private Via via;
     private String lote;
-    private Integer  quantidade;
-    private String validade; 
+    private int  quantidade;
+    private LocalDate validade; 
     @Enumerated(EnumType.STRING) 
-    private Laboratorio laboratorio; 
+    private Laboratorio laboratorio;
+    
+    public void atualizarInformacoes(DadosAtualizarRemedio dados) {
+        this.nome = dados.nome() != null ? dados.nome() : this.nome;
+        this.via = dados.via() != null ? dados.via() : this.via;
+        this.laboratorio = dados.laboratorio() != null ? dados.laboratorio() : this.laboratorio;
+                
+    } 
 }

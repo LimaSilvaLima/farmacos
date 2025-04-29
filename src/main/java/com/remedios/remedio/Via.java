@@ -10,5 +10,7 @@ public enum Via {
     VENOSA,
     RETAL,
     INTRAMUSCULAR,
-    SUBCUTANEA
+    SUBCUTANEA,
+    INTRADERMICA,
+    INHALATORIA,
 }

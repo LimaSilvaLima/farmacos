@@ -8,5 +8,10 @@ public enum Laboratorio {
     EUROFARMA,
     HYPERA,
     SANOFI,
-    UNICHEM
+    UNICHEM,
+    GLOBOPHARMA,
+    FARMASAN,
+    FARMACEUTICA,
+    NOVARTIS,
+    PFIZER
 }
