@@ -26,6 +26,7 @@ import lombok.Setter;
 public class Remedio {
 
     public Remedio(DadosCadastroRemedio dados) {
+        this.ativo = true;
         this.nome = dados.nome();
         this.via = dados.via();
         this.lote = dados.lote();
@@ -46,10 +47,22 @@ public class Remedio {
     @Enumerated(EnumType.STRING) 
     private Laboratorio laboratorio;
     
+    private boolean ativo = true;
+
     public void atualizarInformacoes(DadosAtualizarRemedio dados) {
         this.nome = dados.nome() != null ? dados.nome() : this.nome;
         this.via = dados.via() != null ? dados.via() : this.via;
         this.laboratorio = dados.laboratorio() != null ? dados.laboratorio() : this.laboratorio;
                 
+    }
+
+    public void inativar() {
+        
+        this.ativo = false;
+    }
+
+    public void reativar() {
+        
+        this.ativo = true;
     } 
 }
