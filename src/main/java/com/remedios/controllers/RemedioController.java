@@ -2,6 +2,7 @@ package com.remedios.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.remedios.remedio.DadosAtualizarRemedio;
 import com.remedios.remedio.DadosCadastroRemedio;
@@ -23,7 +24,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -36,10 +36,17 @@ public class RemedioController {
 
     @Autowired
     private RemedioRepository repository;
+
+
     @PostMapping
     @Transactional
-    public ResponseEntity<T> casdastrar(@RequestBody @Valid DadosCadastroRemedio dados){
-       repository.save(new Remedio(dados));
+    public ResponseEntity<DadosDetalhamentoRemedio> cadastrar(@RequestBody @Valid DadosCadastroRemedio dados, UriComponentsBuilder uriBuilder) {
+       var remedio = new Remedio(dados);
+        repository.save(remedio);
+       // Cria o URI para o novo recurso
+       var uri = uriBuilder.path("/remedios/{id}").buildAndExpand(remedio.getId()).toUri();
+       
+       return ResponseEntity.created(uri).body(new DadosDetalhamentoRemedio(remedio));
     }
     
     @GetMapping

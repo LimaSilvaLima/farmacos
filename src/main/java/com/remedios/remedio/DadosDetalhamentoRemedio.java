@@ -21,5 +21,6 @@ public record DadosDetalhamentoRemedio(
         remedio.getValidade(), 
         remedio.getLaboratorio(),
         remedio.isAtivo());
+    }
 
 }

@@ -13,5 +13,20 @@ public enum Laboratorio {
     FARMASAN,
     FARMACEUTICA,
     NOVARTIS,
-    PFIZER
+    PFIZER,
+    ASTRAZENECA,
+    BAYER,
+    JOHNSON,
+    MERCK,  
+    ABBVIE,
+    ROCHE,
+    CIBA,
+    NATIVITA,
+    CIMED,
+    VITAMEDICA,
+    HYPERGEN,
+    BIOSINTETICA,
+    HYPERMED,
+    HYPERFARMA
+    
 }
