@@ -46,7 +46,7 @@ public class Remedio {
     private LocalDate validade; 
     @Enumerated(EnumType.STRING) 
     private Laboratorio laboratorio;
-    
+    //private  tinyint ativo;
     private boolean ativo = true;
 
     public void atualizarInformacoes(DadosAtualizarRemedio dados) {

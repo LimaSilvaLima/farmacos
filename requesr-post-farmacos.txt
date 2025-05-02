@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nome": "succinato de metropolol",
+        "via": "ORAL",
+        "lote": "34",
+        "laboratorio": "MEDLEY",
+        "validade": "2027-06-30",
+        "quantidade": 10
+    },
+    {
+        "id": 2,
+        "nome": "maxidex",
+        "via": "OTICA",
+        "lote": "32",
+        "laboratorio": "MEDLEY",
+        "validade": "2028-04-28",
+        "quantidade": 12
+    },
+    {
+        "id": 3,
+        "nome": "ciprofibrato",
+        "via": "ORAL",
+        "lote": "l2",
+        "laboratorio": "GLOBOPHARMA",
+        "validade": "2027-10-30",
+        "quantidade": 12
+    },
+    {
+        "id": 5,
+        "nome": "captopril",
+        "via": "ORAL",
+        "lote": "C21l2",
+        "laboratorio": "GLOBOPHARMA",
+        "validade": "2029-12-31",
+        "quantidade": 12
+    },
+    {
+        "id": 7,
+        "nome": "midazolan",
+        "via": "ORAL",
+        "lote": "45",
+        "laboratorio": "MEDLEY",
+        "validade": "2029-12-31",
+        "quantidade": 12
+    },
+    {
+        "id": 9,
+        "nome": "amoxicilina",
+        "via": "ORAL",
+        "lote": "b45",
+        "laboratorio": "UNICHEM",
+        "validade": "2029-12-31",
+        "quantidade": 12
+    },
+    {
+        "id": 10,
+        "nome": "neosaldina",
+        "via": "ORAL",
+        "lote": "b45",
+        "laboratorio": "UNICHEM",
+        "validade": "2030-11-30",
+        "quantidade": 12
+    },
+    {
+        "id": 11,
+        "nome": "loratadina",
+        "via": "NASAL",
+        "lote": "b45",
+        "laboratorio": "EUROFARMA",
+        "validade": "2028-06-30",
+        "quantidade": 12
+    },
+    {
+        "id": 12,
+        "nome": "nmesulida",
+        "via": "ORAL",
+        "lote": "TT",
+        "laboratorio": "ACHE",
+        "validade": "2027-06-30",
+        "quantidade": 12
+    },
+    {
+        "id": 13,
+        "nome": "ferropurum",
+        "via": "VENOSA",
+        "lote": "TT",
+        "laboratorio": "FARMACEUTICA",
+        "validade": "2027-06-30",
+        "quantidade": 12
+    }
+]
