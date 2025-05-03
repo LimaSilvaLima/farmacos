@@ -26,6 +26,7 @@ public enum Laboratorio {
     VITAMEDICA,
     HYPERGEN,
     BIOSINTETICA,
+    TEUTO,
     HYPERMED,
     HYPERFARMA
     
