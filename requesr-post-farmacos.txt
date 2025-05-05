@@ -88,5 +88,42 @@
         "laboratorio": "FARMACEUTICA",
         "validade": "2027-06-30",
         "quantidade": 12
+    },
+	{
+        "id": 9,
+        "nome": "nmesulida",
+        "via": "ORAL",
+        "lote": "TT",
+        "laboratorio": "ACHE",
+        "validade": "2027-06-30",
+        "quantidade": 12
+    },
+    {
+        "id": 10,
+        "nome": "dexason",
+        "via": "ORAL",
+        "lote": "9465311",
+        "laboratorio": "VITAMEDICA",
+        "validade": "2026-08-30",
+        "quantidade": 52
     }
 ]
+
+$2a$12$VwDtywalx2v4xx7wgk2JFu..ZEy1tpDf84xogV4rwiALuc31GMgPa
+
+$2a$12$VwDtywalx2v4xx7wgk2JFu..ZEy1tpDf84xogV4rwiALuc31GMgPa
+
+boolean ativo not null default 1,
+
+construtor de DadosAutenticacao:
+
+public DadosAutenticacao(String login, String senha) {
+         this.login = login;
+         this.senha = senha;
+     }
+	 
+	 
+	 segundo usuario:
+	 silvalima
+	 000000
+	 $2a$12$ZKdCD6uwY4h0mtDIRnYx8en4oPCfy3Leufup091k4JtLh0WL9T6Yq

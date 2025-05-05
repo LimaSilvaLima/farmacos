@@ -16,11 +16,6 @@ public class AutenticacaoService implements UserDetailsService {
         return repository.findByLogin(username);
     }
 
-
-
-    public void cadastrarUsuario(Usuario usuario) {
-        // TODO Auto-generated method stub
-        
-    }
+    
 
 }
