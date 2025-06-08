@@ -16,6 +16,4 @@ public class AutenticacaoService implements UserDetailsService {
         return repository.findByLogin(username);
     }
 
-    
-
 }

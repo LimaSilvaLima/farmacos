@@ -1,4 +1,6 @@
 package com.remedios.infra;
+import com.remedios.infra.TokenService;
+import com.remedios.usuarios.UsuarioRepository;
 
 import java.io.IOException;
 
@@ -11,49 +13,39 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.experimental.var;
-
-import  com.remedios.infra.TokenService;
-import com.remedios.usuarios.UsuarioRepository;
 
 @Component
-public interface SecurityFilter extends OncePerRequestFilter {
-    //@Autowired 
-    //private TokenService tokenService;
-    //@Autowired
-    //private UsuarioRepository repository;
+public class SecurityFilter extends OncePerRequestFilter{
+
+    @Autowired
+    private TokenService tokenService; 
+    @Autowired
+    private UsuarioRepository repository;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-    throws ServletException, IOException {
-       
+            throws ServletException, IOException {
         var tokenJWT = recuperarToken(request);
         
-        if (tokenJWT !=null){
-            var subject = tokenService.getSubjetc(tokenJWT);
-            var usuario = repository.findByLogin(subject);
+        if (tokenJWT != null) {
+            var subject = tokenService.getSubject(tokenJWT);
+            var usuario = repository.findByLogin((String) subject);
             var authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            System.out.println("Token JWT: " + tokenJWT);
-            System.out.println(tokenJWT);
-
-
         }
-        
-        
-
         filterChain.doFilter(request, response);
-        
     }
-    private String recuperarToken(HttpServletRequest request) {
-        var autrhorizationHeader = request.getHeader("Authorization");
-        if (autrhorizationHeader != null) {
-            return autrhorizationHeader.replace("Bearer ", "");
-                        
-        } 
+                                 
+        private String recuperarToken(HttpServletRequest request) {
+            var authorizationHeader = request.getHeader("Authorization");
+            if (authorizationHeader != null) {
+                return authorizationHeader.replace("Bearer ","");
+            }
         return null;
-    }
-    
+                
+        }
+
+        
 
 }

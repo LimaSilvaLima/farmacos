@@ -14,7 +14,8 @@ import com.remedios.remedio.RemedioRepository;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import lombok.experimental.var;
+//import lombok.experimental.var;
+import lombok.var;
 
 import java.util.List;
 
